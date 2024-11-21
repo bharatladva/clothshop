@@ -33,7 +33,7 @@ export const navData = `
         </a>
         <a
             class="icone like-icone"
-            href="./cart.html"
+            href="./likes.html"
         >
         </a>
 `;

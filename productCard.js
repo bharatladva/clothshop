@@ -37,10 +37,10 @@ let productChilds = `
 					<p>${product.description}</p>
 				  <p class="pick">choose size</p>
           <div class="sizes">
-            <div class="size">5</div>
-            <div class="size">6</div>
-            <div class="size">7</div>
-            <div class="size">8</div>
+            <div class="size">S</div>
+            <div class="size">M</div>
+            <div class="size">L</div>
+            <div class="size">XL</div>
 					</div>
 					<ul class="product-color">
             <li>COLOR</li>

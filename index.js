@@ -17,7 +17,7 @@ let sliderChilds = data
 							draggable="false"
 						/>
 					</div>
-					<h2 style="color: green; font-weight: bold">${c.title}</h2>
+					<h2>${c.title}</h2>
 					<span>${c.description}</span>
 				</a>
 				`
