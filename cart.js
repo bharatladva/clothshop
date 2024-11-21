@@ -1,6 +1,6 @@
 /** @format */
 
-import { renderNav, renderFooter, renderlocate } from "./navNfooterNlocat.js";
+import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
@@ -41,13 +41,15 @@ function renderCartItems() {
         <div class="cart-item-title">${item.title}</div>
         <div class="cart-item-price">Price: <span id="price-${item.id}">${
 			item.price * quantities[item.id]
-		}</span></div>
+		}</span>
+			  </div>
       </div>
       <div class="quantity-adjust">
         <button class="decrease-btn" data-id="${item.id}">-</button>
         <input type="text" id="quantity-${item.id}" value="${quantities[item.id]}" readonly />
         <button class="increase-btn" data-id="${item.id}">+</button>
-        <button class="icone delete-icone" id="deleteBtn"></button>
+        <button class="icone delete-icone" data-id="${item.id}"></button>
+
 
       </div>
     `;
@@ -87,6 +89,7 @@ function handleDecrease(event) {
 // Delete item from cart and update localStorage
 function handleDelete(event) {
 	const itemId = Number(event.target.dataset.id);
+	console.log(itemId);
 
 	// Remove item from cart array
 	cart = cart.filter((id) => id !== itemId);

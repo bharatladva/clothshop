@@ -1,6 +1,6 @@
 /** @format */
 import { data, catagary } from "./data.js";
-import { renderNav, renderFooter, renderlocate } from "./navNfooterNlocat.js";
+import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
