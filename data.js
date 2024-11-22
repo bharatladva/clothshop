@@ -1,12 +1,13 @@
 /** @format */
 
-export const data = [
+export let data = [
 	{
 		id: 0,
 		price: 10,
 		title: "Slide 1",
 		description: "This is the first slide",
 		image: "images/woman/w1.2.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 1,
@@ -14,6 +15,7 @@ export const data = [
 		title: "Slide 2",
 		description: "This is the second slide",
 		image: "images/woman/w2.3.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 2,
@@ -21,6 +23,7 @@ export const data = [
 		title: "Slide 3",
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 3,
@@ -28,6 +31,7 @@ export const data = [
 		title: "Slide 4",
 		description: "This is the third slide",
 		image: "images/woman/w3.2.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 4,
@@ -35,6 +39,7 @@ export const data = [
 		title: "Slide 5",
 		description: "This is the third slide",
 		image: "images/woman/w4.2.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 5,
@@ -42,6 +47,7 @@ export const data = [
 		title: "Slide 6",
 		description: "This is the third slide",
 		image: "images/woman/w5.2.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 6,
@@ -49,6 +55,7 @@ export const data = [
 		title: "Slide 7",
 		description: "This is the third slide",
 		image: "images/woman/w6.2.jpg",
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
 		id: 7,
@@ -56,16 +63,19 @@ export const data = [
 		title: "Slide 8",
 		description: "This is the third slide",
 
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		image: "images/woman/w7.2.jpg",
 	},
 	{
 		id: 8,
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		price: 10,
 		title: "Slide 9",
 		description: "This is the third slide",
 		image: "images/woman/w7.jpg",
 	},
 	{
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		id: 9,
 		price: 10,
 		title: "Slide 10",

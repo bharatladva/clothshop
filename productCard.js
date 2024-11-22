@@ -27,6 +27,11 @@ if (product) {
 }
 
 let productChilds = `
+
+
+<div class="main-card">
+	<div class="product-data">
+
 			<div class="product-img">
 				<img src="${product.image}" />
 			</div>
@@ -56,15 +61,102 @@ let productChilds = `
 				  </div>
 				</div>
       </div>
+
+
+
+			<div class="comment-box">
+			<h1>comments</h1>
+      <div class="display-comments"></div>
+      <div class="cooments-input">
+
+		  <form id="commentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+			</div>
+	</div>
+
+
   </div>
+
+
+
+	</div>
+
+</div>
+
+
+
 				`;
 
 let product_wrapper = document.getElementById("product-wrapper");
 product_wrapper.innerHTML = productChilds;
 
+document.getElementById("commentForm").addEventListener("submit", function (event) {
+	event.preventDefault(); // Prevent the form from submitting normally
+
+	// Collect the form data
+	const formData = {
+		name: document.getElementById("name").value,
+		comment: document.getElementById("comment").value,
+	};
+
+	// Find the product in the data array
+	const productIndex = data.findIndex((item) => item.id == productId);
+
+	if (productIndex !== -1) {
+		const product = data[productIndex];
+
+		// Initialize comments array if not present
+		if (!product.comments) {
+			product.comments = [];
+		}
+
+		// Push the new comment into the product's comments array
+		product.comments.push(formData);
+		console.log("Updated product:", product);
+		console.log("Updated product comments:", product.comments);
+
+		// Update the data array with the new comment (this line isn't really needed as we modify the object directly)
+		data[productIndex] = product;
+
+		// Clear the form after submitting
+		document.getElementById("name").value = "";
+		document.getElementById("comment").value = "";
+
+		// Render updated comments in the DOM
+		displayComments(product.comments);
+	} else {
+		console.log("Product not found for ID:", productId);
+	}
+});
+
+// Function to display comments in the DOM
+function displayComments(comments) {
+	const commentsContainer = document.querySelector(".display-comments");
+	commentsContainer.innerHTML = ""; // Clear existing comments
+
+	comments.forEach((comment) => {
+		const commentElement = document.createElement("div");
+		commentElement.classList.add("comment");
+		commentElement.innerHTML = `<strong>${comment.name}:</strong> <p>${comment.comment}</p>`;
+		commentsContainer.appendChild(commentElement);
+	});
+}
+
+// Initially display comments if the product is found
+if (product) {
+	displayComments(product.comments);
+}
+
 // Add to Cart Functionality
 const addToCartBtn = document.getElementById("addToCartBtn");
-
 addToCartBtn.addEventListener("click", () => {
 	let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get cart or initialize it
 	if (!cart.includes(productId)) {

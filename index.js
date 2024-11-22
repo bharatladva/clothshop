@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const wrapper = document.querySelector(".wrapper");
 
 	const firstCard = carousel.querySelector(".card");
-	const firstCardWidth = firstCard.offsetWidth;
+	const firstCardWidth = firstCard.offsetWidth; //widht used later for calculating scroll movement.
 
 	let isDragging = false,
 		startX,
