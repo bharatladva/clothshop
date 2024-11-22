@@ -70,9 +70,9 @@ addToCartBtn.addEventListener("click", () => {
 	if (!cart.includes(productId)) {
 		cart.push(productId); // Add product ID if not already in cart
 		localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
-		alert("Product added to cart!");
+		// alert("Product added to cart!");
 	} else {
-		alert("Product already in cart!");
+		// alert("Product already in cart!");
 	}
 });
 
@@ -84,9 +84,9 @@ likeBtn.addEventListener("click", () => {
 	if (!likes.includes(productId)) {
 		likes.push(productId); // Add product ID if not already liked
 		localStorage.setItem("likes", JSON.stringify(likes)); // Update local storage
-		alert("Product liked!");
+		// alert("Product liked!");
 	} else {
-		alert("Product already liked!");
+		// alert("Product already liked!");
 	}
 });
 

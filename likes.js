@@ -11,9 +11,9 @@ let likes = localStorage.getItem("likes");
 
 if (likes) {
 	likes = JSON.parse(likes).map((id) => Number(id)); // Ensure the cart IDs are numbers
-	console.log("likes:", likes);
+	// console.log("likes:", likes);
 } else {
-	console.log("likes is empty");
+	// console.log("likes is empty");
 }
 
 const liketemsContainer = document.getElementById("cart-items");
@@ -37,7 +37,7 @@ function renderLikeItems() {
 			  </div>
       </div>
       <div class="quantity-adjust">
-			 <button type="button" class="btn btn-filled-dark" id="addToCartBtn">Add To Cart</button>
+			 <button type="button" class="btn btn-filled-dark addToCartBtn" id="addToCartBtn" data-id="${item.id}">Add To Cart</button>
         <button class="icone delete-icone" data-id="${item.id}"></button>
       </div>
 
@@ -50,19 +50,20 @@ function renderLikeItems() {
 	document.querySelectorAll(".delete-icone").forEach((button) => {
 		button.addEventListener("click", handleDelete);
 	});
-	const addToCartBtn = document.getElementById("addToCartBtn");
-	addToCartBtn.addEventListener("click", handleaddToCart);
+	document.querySelectorAll(".addToCartBtn").forEach((button) => {
+		button.addEventListener("click", handleaddToCart);
+	});
 }
 
-function handleaddToCart() {
-	e.stopPropagation();
+function handleaddToCart(event) {
+	const itemId = Number(event.target.dataset.id);
 	let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get cart or initialize it
-	if (!cart.includes(item.id)) {
-		cart.push(item.id); // Add product ID if not already in cart
+	if (!cart.includes(itemId)) {
+		cart.push(itemId); // Add product ID if not already in cart
 		localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
-		alert("Product added to cart!");
+		// alert("Product added to cart!");
 	} else {
-		alert("Product already in cart!");
+		// alert("Product already in cart!");
 	}
 }
 
