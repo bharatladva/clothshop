@@ -2,7 +2,7 @@
 
 export const navData = `
     <a
-        href="./index2.html"
+        href="./index.html"
         id="logo"
     >
         <img
