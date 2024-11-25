@@ -46,7 +46,7 @@ export let data = [
 		price: 10,
 		title: "Slide 6",
 		description: "This is the third slide",
-		image: "images/woman/w5.2.jpg",
+		image: "images/woman/w4.1.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 	{
