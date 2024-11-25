@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		carousel.classList.add("dragging");
 		startX = e.pageX; //provides the horizontal coordinate of the mouse pointer relative to the entire document.
 		startScrollLeft = carousel.scrollLeft;
+		console.log("erfg", crousel.scrollLeft, e.pageX);
 	};
 
 	const dragging = (e) => {
@@ -76,11 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 	const autoPlay = () => {
-		// Return if window is smaller than 800
-		if (window.innerWidth < 800) return;
+		if (window.innerWidth < 800) return; // stop is in smole srcreen
 
-		// Calculate the total width of all cards
-		const totalCardWidth = carousel.scrollWidth;
+		const totalCardWidth = carousel.scrollWidth; // Calculate the total width of all cards
 
 		// Calculate the maximum scroll position
 		const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (carousel.scrollLeft >= maxScrollLeft) return;
 
 		// Autoplay the carousel after every 2500ms
-		timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
+		timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2000);
 	};
 
 	carousel.addEventListener("mousedown", dragStart);
@@ -98,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 	wrapper.addEventListener("mouseleave", autoPlay);
 
-	// Add event listeners for the arrow buttons to
 	// scroll the carousel left and right
 	arrowBtns.forEach((btn) => {
 		btn.addEventListener("click", () => {

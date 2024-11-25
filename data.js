@@ -85,6 +85,25 @@ export let data = [
 	},
 ];
 
+// export function updateDataById(id, updatedObject) {
+// 	// Convert id to a number to ensure proper comparison
+// 	const index = data.findIndex((item) => item.id === Number(id));
+// 	console.log("Updated Object:", updatedObject);
+
+// 	if (index !== -1) {
+// 		console.log("Found product at index", index);
+
+// 		// Merge the existing item with the new object properties
+// 		data[index] = { ...data[index], ...updatedObject };
+// 		console.log("Data after update:", data[index]); // Log updated data
+// 		return true;
+// 	}
+
+// 	console.log("No product found for ID", id);
+// 	return false;
+// }
+// setInterval(() => console.log(data), 1000);
+
 export const catagary = [
 	{
 		title: "Men's Clothing",

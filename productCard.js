@@ -6,16 +6,11 @@ renderNav();
 renderFooter();
 renderlocate();
 
-// Get the full URL
+// get the id from search bar
 const queryString = window.location.search;
-
-// Create a URLSearchParams object to parse the query string
 const urlParams = new URLSearchParams(queryString);
-
-// Get the 'id' parameter from the URL
 const productId = urlParams.get("id");
 
-// Log the value of 'id'
 console.log("Product ID:", productId);
 
 const product = data.find((item) => item.id == productId);
@@ -27,9 +22,6 @@ if (product) {
 }
 
 let productChilds = `
-
-
-<div class="main-card">
 	<div class="product-data">
 
 			<div class="product-img">
@@ -64,29 +56,6 @@ let productChilds = `
 
 
 
-			<div class="comment-box">
-			<h1>comments</h1>
-      <div class="display-comments"></div>
-      <div class="cooments-input">
-
-		  <form id="commentForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" rows="5" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-
-			</div>
-	</div>
-
-
-  </div>
-
-
-
 	</div>
 
 </div>
@@ -98,70 +67,13 @@ let productChilds = `
 let product_wrapper = document.getElementById("product-wrapper");
 product_wrapper.innerHTML = productChilds;
 
-document.getElementById("commentForm").addEventListener("submit", function (event) {
-	event.preventDefault(); // Prevent the form from submitting normally
-
-	// Collect the form data
-	const formData = {
-		name: document.getElementById("name").value,
-		comment: document.getElementById("comment").value,
-	};
-
-	// Find the product in the data array
-	const productIndex = data.findIndex((item) => item.id == productId);
-
-	if (productIndex !== -1) {
-		const product = data[productIndex];
-
-		// Initialize comments array if not present
-		if (!product.comments) {
-			product.comments = [];
-		}
-
-		// Push the new comment into the product's comments array
-		product.comments.push(formData);
-		console.log("Updated product:", product);
-		console.log("Updated product comments:", product.comments);
-
-		// Update the data array with the new comment (this line isn't really needed as we modify the object directly)
-		data[productIndex] = product;
-
-		// Clear the form after submitting
-		document.getElementById("name").value = "";
-		document.getElementById("comment").value = "";
-
-		// Render updated comments in the DOM
-		displayComments(product.comments);
-	} else {
-		console.log("Product not found for ID:", productId);
-	}
-});
-
-// Function to display comments in the DOM
-function displayComments(comments) {
-	const commentsContainer = document.querySelector(".display-comments");
-	commentsContainer.innerHTML = ""; // Clear existing comments
-
-	comments.forEach((comment) => {
-		const commentElement = document.createElement("div");
-		commentElement.classList.add("comment");
-		commentElement.innerHTML = `<strong>${comment.name}:</strong> <p>${comment.comment}</p>`;
-		commentsContainer.appendChild(commentElement);
-	});
-}
-
-// Initially display comments if the product is found
-if (product) {
-	displayComments(product.comments);
-}
-
 // Add to Cart Functionality
 const addToCartBtn = document.getElementById("addToCartBtn");
 addToCartBtn.addEventListener("click", () => {
-	let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get cart or initialize it
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	if (!cart.includes(productId)) {
-		cart.push(productId); // Add product ID if not already in cart
-		localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
+		cart.push(productId);
+		localStorage.setItem("cart", JSON.stringify(cart));
 		// alert("Product added to cart!");
 	} else {
 		// alert("Product already in cart!");
@@ -170,12 +82,11 @@ addToCartBtn.addEventListener("click", () => {
 
 // Add Like Functionality
 const likeBtn = document.getElementById("likeBtn");
-
 likeBtn.addEventListener("click", () => {
-	let likes = JSON.parse(localStorage.getItem("likes")) || []; // Get likes or initialize it
+	let likes = JSON.parse(localStorage.getItem("likes")) || [];
 	if (!likes.includes(productId)) {
-		likes.push(productId); // Add product ID if not already liked
-		localStorage.setItem("likes", JSON.stringify(likes)); // Update local storage
+		likes.push(productId);
+		localStorage.setItem("likes", JSON.stringify(likes));
 		// alert("Product liked!");
 	} else {
 		// alert("Product already liked!");
@@ -215,3 +126,72 @@ let gridChilds = data
 
 let grid_wrapper = document.getElementById("grid-wrapper");
 grid_wrapper.innerHTML = gridChilds;
+
+{
+	/*
+	<div class="comment-box">
+			<h1>comments</h1>
+      <div class="display-comments"></div>
+      <div class="cooments-input">
+		    <form id="commentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+			</div>
+	</div>
+
+			*/
+}
+
+// document.getElementById("commentForm").addEventListener("submit", function (event) {
+// 	event.preventDefault();
+
+// 	const formData = {
+// 		name: document.getElementById("name").value,
+// 		comment: document.getElementById("comment").value,
+// 	};
+
+// 	const productIndex = data.findIndex((item) => item.id == productId);
+
+// 	if (productIndex !== -1) {
+// 		const product = data[productIndex];
+
+// 		if (!product.comments) {
+// 			product.comments = [];
+// 		}
+
+// 		product.comments.push(formData);
+// 		console.log("Updated product:", product);
+
+// 		updateDataById(Number(productId), product);
+
+// 		document.getElementById("name").value = "";
+// 		document.getElementById("comment").value = "";
+
+// 		displayComments(product.comments);
+// 	} else {
+// 		console.log("Product not found for ID:", productId);
+// 	}
+// });
+
+// // Function to display comments in the DOM
+// function displayComments(comments) {
+// 	const commentsContainer = document.querySelector(".display-comments");
+// 	commentsContainer.innerHTML = "";
+
+// 	comments.forEach((comment) => {
+// 		const commentElement = document.createElement("div");
+// 		commentElement.classList.add("comment");
+// 		commentElement.innerHTML = `<strong>${comment.name}:</strong> <p>${comment.comment}</p>`;
+// 		commentsContainer.appendChild(commentElement);
+// 	});
+// }
+
+// if (product) {
+// 	displayComments(product.comments);
+// }
