@@ -9,7 +9,7 @@ export let data = [
 		description: "This is the first slide",
 		image: "images/woman/w1.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 5, // Unique discount
+		discount: 5,
 	},
 	{
 		id: 1,
@@ -19,7 +19,7 @@ export let data = [
 		description: "This is the second slide",
 		image: "images/woman/w2.3.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 10, // Unique discount
+		discount: 10,
 	},
 	{
 		id: 2,
@@ -29,7 +29,7 @@ export let data = [
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 7, // Unique discount
+		discount: 7,
 	},
 	{
 		color: ["red", "green", "blue"],
@@ -39,7 +39,7 @@ export let data = [
 		description: "This is the third slide",
 		image: "images/woman/w3.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 12, // Unique discount
+		discount: 12,
 	},
 	{
 		color: ["red", "green", "blue"],
@@ -49,7 +49,7 @@ export let data = [
 		description: "This is the third slide",
 		image: "images/woman/w4.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 8, // Unique discount
+		discount: 8,
 	},
 	{
 		id: 5,
@@ -59,7 +59,7 @@ export let data = [
 		description: "This is the third slide",
 		image: "images/woman/w4.1.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 15, // Unique discount
+		discount: 15,
 	},
 	{
 		id: 6,
@@ -69,7 +69,7 @@ export let data = [
 		description: "This is the third slide",
 		image: "images/woman/w6.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		discount: 10, // Unique discount
+		discount: 10,
 	},
 	{
 		id: 7,
@@ -79,7 +79,7 @@ export let data = [
 		description: "This is the third slide",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		image: "images/woman/w7.2.jpg",
-		discount: 20, // Unique discount
+		discount: 20,
 	},
 	{
 		id: 8,
@@ -89,7 +89,7 @@ export let data = [
 		title: "Slide 9",
 		description: "This is the third slide",
 		image: "images/woman/w7.jpg",
-		discount: 18, // Unique discount
+		discount: 18,
 	},
 	{
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
@@ -99,7 +99,7 @@ export let data = [
 		title: "Slide 10",
 		description: "This is the third slide",
 		image: "images/woman/w5.1.jpg",
-		discount: 25, // Unique discount
+		discount: 25,
 	},
 ];
 

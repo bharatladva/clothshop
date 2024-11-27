@@ -1,5 +1,5 @@
 /** @format */
-import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
+import { renderNav, renderFooter, renderlocate } from "../repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();

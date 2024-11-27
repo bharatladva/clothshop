@@ -1,6 +1,10 @@
 /** @format */
 
 import { data, catagary } from "./data.js";
+import { renderNav, renderFooter, renderlocate } from "../repetedModules.js";
+renderNav();
+renderFooter();
+renderlocate();
 
 const rangeInput = document.getElementById("rangeInput");
 const rangeValue = document.getElementById("rangeValue");
