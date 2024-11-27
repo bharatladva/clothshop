@@ -1,6 +1,9 @@
 /** @format */
 
 @media only screen and (max-width: 600px) {
+	* {
+		background-color: red;
+	}
 	:root {
 		--pg-margin: 16px;
 	}
