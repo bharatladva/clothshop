@@ -1,18 +1,49 @@
 /** @format */
 
+.filter-main {
+	display: flex;
+	gap: 20px;
+}
+
+.filters {
+	width: 20%;
+}
 .range-container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: start;
 	margin-top: 50px;
 }
 
 input[type="range"] {
-	width: 300px;
-	margin: 20px;
+	width: 100%;
+	/* margin: 20px; */
 }
 
 #rangeValue {
 	font-size: 18px;
 	font-weight: bold;
+}
+
+/* Color Filter Styling */
+.color-filters {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: start;
+}
+
+.color-filters label {
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.color-filters input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	accent-color: #007bff; /* Change the color of the checkbox */
 }

@@ -4,84 +4,102 @@ export let data = [
 	{
 		id: 0,
 		price: 10,
+		color: ["red", "green", "blue"],
 		title: "Slide 1",
 		description: "This is the first slide",
 		image: "images/woman/w1.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 5, // Unique discount
 	},
 	{
 		id: 1,
+		color: ["red", "green"],
 		price: 20,
 		title: "Slide 2",
 		description: "This is the second slide",
 		image: "images/woman/w2.3.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 10, // Unique discount
 	},
 	{
 		id: 2,
+		color: ["blue"],
 		price: 30,
 		title: "Slide 3",
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 7, // Unique discount
 	},
 	{
+		color: ["red", "green", "blue"],
 		id: 3,
 		price: 40,
 		title: "Slide 4",
 		description: "This is the third slide",
 		image: "images/woman/w3.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 12, // Unique discount
 	},
 	{
+		color: ["red", "green", "blue"],
 		id: 4,
 		price: 50,
 		title: "Slide 5",
 		description: "This is the third slide",
 		image: "images/woman/w4.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 8, // Unique discount
 	},
 	{
 		id: 5,
+		color: ["red", "green", "blue"],
 		price: 60,
 		title: "Slide 6",
 		description: "This is the third slide",
 		image: "images/woman/w4.1.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 15, // Unique discount
 	},
 	{
 		id: 6,
+		color: ["red", "green", "blue"],
 		price: 70,
 		title: "Slide 7",
 		description: "This is the third slide",
 		image: "images/woman/w6.2.jpg",
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		discount: 10, // Unique discount
 	},
 	{
 		id: 7,
+		color: ["red", "green", "blue"],
 		price: 80,
 		title: "Slide 8",
 		description: "This is the third slide",
-
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		image: "images/woman/w7.2.jpg",
+		discount: 20, // Unique discount
 	},
 	{
 		id: 8,
+		color: ["red", "green", "blue"],
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		price: 90,
 		title: "Slide 9",
 		description: "This is the third slide",
 		image: "images/woman/w7.jpg",
+		discount: 18, // Unique discount
 	},
 	{
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		color: ["red", "green", "blue"],
 		id: 9,
 		price: 100,
 		title: "Slide 10",
 		description: "This is the third slide",
-
 		image: "images/woman/w5.1.jpg",
+		discount: 25, // Unique discount
 	},
 ];
 

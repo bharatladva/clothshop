@@ -11,24 +11,76 @@
 		<title>Range Input Example</title>
 		<link
 			rel="stylesheet"
-			href="filterpage.css"
+			href="./style/style2.css"
 		/>
 	</head>
 	<body>
-		<div class="filters">
-			<div class="range-container">
-				<input
-					type="range"
-					id="rangeInput"
-					min="0"
-					max="100"
-					value="50"
-				/>
-				<span id="rangeValue">50</span>
-			</div>
-		</div>
-		<div id="resultContainer"></div>
+		<div class="filter-main">
+			<section class="filters">
+				<h2>Filters</h2>
 
+				<!-- Range input for price -->
+				<div class="range-container">
+					<h3>Price 0 to <span id="rangeValue">50</span></h3>
+					<input
+						type="range"
+						id="rangeInput"
+						min="0"
+						max="100"
+						value="50"
+					/>
+				</div>
+
+				<!-- Range input for discount -->
+				<div class="range-container">
+					<h3>Discount 0 to <span id="discountValue">10</span>%</h3>
+					<input
+						type="range"
+						id="discountInput"
+						min="0"
+						max="30"
+						value="10"
+					/>
+				</div>
+
+				<!-- Color filter checkboxes -->
+				<div class="color-filters">
+					<h3>Color</h3>
+					<label>
+						<input
+							type="checkbox"
+							class="colorCheckbox"
+							value="red"
+						/>
+						Red
+					</label>
+					<label>
+						<input
+							type="checkbox"
+							class="colorCheckbox"
+							value="green"
+						/>
+						Green
+					</label>
+					<label>
+						<input
+							type="checkbox"
+							class="colorCheckbox"
+							value="blue"
+						/>
+						Blue
+					</label>
+				</div>
+			</section>
+
+			<section>
+				<h2>Flex cards</h2>
+				<div
+					class="flex-card"
+					id="flex-card"
+				></div>
+			</section>
+		</div>
 		<script
 			type="module"
 			src="filterpage.js"
