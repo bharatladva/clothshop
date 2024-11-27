@@ -8,6 +8,7 @@
 	section.hero {
 		aspect-ratio: 1/1;
 		padding-top: 64px;
+		height: 90vh !important;
 	}
 
 	section.hero h1 {
@@ -18,6 +19,23 @@
 	section.hero {
 		background-size: 85%;
 		background-position: 360% 60%;
+	}
+
+	.wrapper .carousel {
+		grid-auto-columns: calc((100% / 1) - 0px);
+	}
+
+	.card {
+		width: 400px !important;
+	}
+
+	.flex-card {
+		justify-content: center;
+	}
+
+	.flex-card .card {
+		width: 400px !important;
+		height: 320px;
 	}
 
 	nav {
