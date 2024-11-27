@@ -6,6 +6,7 @@
 @import url("./productCard.css");
 @import url("./cart.css");
 @import url("./home.css");
+@import url("./filterpage.css");
 
 :root {
 	--text-01: #45413e;

@@ -11,7 +11,7 @@ export let data = [
 	},
 	{
 		id: 1,
-		price: 10,
+		price: 20,
 		title: "Slide 2",
 		description: "This is the second slide",
 		image: "images/woman/w2.3.jpg",
@@ -19,7 +19,7 @@ export let data = [
 	},
 	{
 		id: 2,
-		price: 10,
+		price: 30,
 		title: "Slide 3",
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
@@ -27,7 +27,7 @@ export let data = [
 	},
 	{
 		id: 3,
-		price: 10,
+		price: 40,
 		title: "Slide 4",
 		description: "This is the third slide",
 		image: "images/woman/w3.2.jpg",
@@ -35,7 +35,7 @@ export let data = [
 	},
 	{
 		id: 4,
-		price: 10,
+		price: 50,
 		title: "Slide 5",
 		description: "This is the third slide",
 		image: "images/woman/w4.2.jpg",
@@ -43,7 +43,7 @@ export let data = [
 	},
 	{
 		id: 5,
-		price: 10,
+		price: 60,
 		title: "Slide 6",
 		description: "This is the third slide",
 		image: "images/woman/w4.1.jpg",
@@ -51,7 +51,7 @@ export let data = [
 	},
 	{
 		id: 6,
-		price: 10,
+		price: 70,
 		title: "Slide 7",
 		description: "This is the third slide",
 		image: "images/woman/w6.2.jpg",
@@ -59,7 +59,7 @@ export let data = [
 	},
 	{
 		id: 7,
-		price: 10,
+		price: 80,
 		title: "Slide 8",
 		description: "This is the third slide",
 
@@ -69,7 +69,7 @@ export let data = [
 	{
 		id: 8,
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		price: 10,
+		price: 90,
 		title: "Slide 9",
 		description: "This is the third slide",
 		image: "images/woman/w7.jpg",
@@ -77,7 +77,7 @@ export let data = [
 	{
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		id: 9,
-		price: 10,
+		price: 100,
 		title: "Slide 10",
 		description: "This is the third slide",
 

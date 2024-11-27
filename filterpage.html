@@ -1,0 +1,37 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Range Input Example</title>
+		<link
+			rel="stylesheet"
+			href="filterpage.css"
+		/>
+	</head>
+	<body>
+		<div class="filters">
+			<div class="range-container">
+				<input
+					type="range"
+					id="rangeInput"
+					min="0"
+					max="100"
+					value="50"
+				/>
+				<span id="rangeValue">50</span>
+			</div>
+		</div>
+		<div id="resultContainer"></div>
+
+		<script
+			type="module"
+			src="filterpage.js"
+		></script>
+	</body>
+</html>
