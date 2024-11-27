@@ -102,6 +102,17 @@
 		flex-direction: column;
 		text-align: center;
 	}
+
+	.filter-main {
+		margin-top: 10%;
+		flex-wrap: wrap;
+	}
+
+	.filters {
+		justify-content: space-between;
+		display: flex;
+		gap: 30px;
+	}
 }
 
 @media only screen and (min-width: 600px) {

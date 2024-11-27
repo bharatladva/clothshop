@@ -76,7 +76,7 @@ function displayResults(items) {
 					</div>
 					<h2>${item.title}</h2>
 					<span>${item.price}</span>
-					<span>${item.discount}</span>
+				   <!--	<span>${item.discount}</span>   -->
 				</a>
         `;
 		resultContainer.appendChild(itemElement);

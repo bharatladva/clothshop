@@ -48,3 +48,8 @@ input[type="range"] {
 	margin-right: 8px;
 	accent-color: #45413e; /* Change the color of the checkbox */
 }
+
+.filter-main .flex-card .card {
+	width: 220px;
+	height: 300px;
+}
