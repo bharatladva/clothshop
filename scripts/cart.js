@@ -1,11 +1,11 @@
 /** @format */
 
-import { renderNav, renderFooter, renderlocate } from "../repetedModules.js";
+import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
 
-import { data } from "../data.js";
+import { data } from "./data.js";
 
 // Get cart items from localStorage
 let cart = localStorage.getItem("cart");

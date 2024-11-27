@@ -250,10 +250,9 @@ section.hero h1 {
 	align-self: center;
 	display: flex;
 	gap: 2rem;
-
+	width: 100%;
 	min-width: fit-content;
 	flex-wrap: wrap;
-	align-items: center;
 
 	padding: 20px 30px;
 	background-color: #dfdada;

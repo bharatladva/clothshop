@@ -1,7 +1,7 @@
 /** @format */
 
 import { data, catagary } from "./data.js";
-import { renderNav, renderFooter, renderlocate } from "../repetedModules.js";
+import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
@@ -64,11 +64,20 @@ function displayResults(items) {
 		const itemElement = document.createElement("div");
 		itemElement.classList.add("item");
 		itemElement.innerHTML = `
-            <h3>${item.title}</h3>
-            <p>Price: $${item.price}</p>
-            <p>Discount: ${item.discount}%</p>
-            <p>${item.description}</p>
-            <img src="${item.image}" alt="${item.title}" width="100">
+
+
+		<a class="card" href="./prodcutCard.html?id=${item.id}">
+					<div class="img">
+						<img
+							src="${item.image}"
+							alt=""
+							draggable="false"
+						/>
+					</div>
+					<h2>${item.title}</h2>
+					<span>${item.price}</span>
+					<span>${item.discount}</span>
+				</a>
         `;
 		resultContainer.appendChild(itemElement);
 	});

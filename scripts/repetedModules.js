@@ -14,7 +14,8 @@ export const navData = `
     </a>
     <ul class="navigation-menu">
         <li>
-            <a href="#">Products</a>
+            <a  href="./filterpage.html"
+						>Disover</a>
         </li>
         <li>
             <a href="#">Services</a>

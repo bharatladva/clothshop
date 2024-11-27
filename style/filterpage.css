@@ -3,6 +3,7 @@
 .filter-main {
 	display: flex;
 	gap: 20px;
+	/* flex-wrap: wrap; */
 }
 
 .filters {
@@ -45,5 +46,5 @@ input[type="range"] {
 	width: 20px;
 	height: 20px;
 	margin-right: 8px;
-	accent-color: #007bff; /* Change the color of the checkbox */
+	accent-color: #45413e; /* Change the color of the checkbox */
 }
