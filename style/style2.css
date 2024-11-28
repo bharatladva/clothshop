@@ -86,6 +86,7 @@ body {
 	background-image: url("../images/icones/Like\ Icons.svg");
 }
 .delete-icone {
+	margin-left: 20px;
 	background-image: url("../images/icones/Delete\ Icons.svg");
 }
 .order-icone {

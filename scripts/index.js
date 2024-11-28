@@ -120,7 +120,6 @@ let catagarydata = catagary
 						<img
 							src="${c.image}"
 						/>
-					</div>
 					<ul>
 						${c.title}
 						<li><a href="#">${c.li5}</a></li>
@@ -133,6 +132,7 @@ let catagarydata = catagary
 							Shop All<span class="material-symbols-outlined"> > </span>
 						</button>
 					</ul>
+					</div>
 				</li>`
 	)
 	.reduce((p, c) => p + " " + c, "");
