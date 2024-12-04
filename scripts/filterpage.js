@@ -64,22 +64,25 @@ function displayResults(items) {
 		itemElement.classList.add("item");
 		itemElement.innerHTML = `
 
+       <a href="./prodcutCard.html?id=${item.id}">
 
+                <div class="product-card" id="product-card">
+                <div class="product-img">
+                <span class="discount-tag">
+                ${100 - Math.round((item.price * 100) / item.discount)}% off</span>
+                <img src="${item.image}"
+                alt="card1" class="product-img">
+                <div class="whislist-btn"><p>add to whislist</p></div>
+                </div>
+                <div class="card-texts">
+                <h1>${item.title}</h1>
+                <p>${item.description}</p>
+                <h2>$${item.price}  <span> $${item.discount}</span></h2>
+                </div>
+                </div>
 
+                </a>
 
-
-		<a class="card" href="./prodcutCard.html?id=${item.id}">
-					<div class="img">
-						<img
-							src="${item.image}"
-							alt=""
-							draggable="false"
-						/>
-					</div>
-					<h2>${item.title}</h2>
-					<span>${item.price}</span>
-				   <!--	<span>${item.discount}</span>   -->
-				</a>
         `;
 		resultContainer.appendChild(itemElement);
 	});

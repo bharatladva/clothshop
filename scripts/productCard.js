@@ -138,10 +138,27 @@ let gridChilds = data
 		}
 
 		return `
-    <div class="${className}">
-    	<a href="./prodcutCard.html?id=${count}">
-      <img src="${c.image}" alt="" />
-      </a>
+
+<div class="${className}">
+   <a href="./prodcutCard.html?id=${count}">
+
+                <div class="product-card" id="product-card">
+                <div class="product-img">
+                <span class="discount-tag">
+                ${100 - Math.round((c.price * 100) / c.discount)}% off</span>
+                <img src="${c.image}"
+                alt="card1" class="product-img">
+                <div class="whislist-btn"><p>add to whislist</p></div>
+                </div>
+                <div class="card-texts">
+                <h1>${c.title}</h1>
+                <p>${c.description}</p>
+                <h2>$${c.price}  <span> $${c.discount}</span></h2>
+                </div>
+                </div>
+
+                </a>
+
     </div>
     `;
 	})
