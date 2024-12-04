@@ -3,10 +3,11 @@
 .filter-main {
 	display: flex;
 	gap: 20px;
-	/* flex-wrap: wrap; */
 }
 
 .filters {
+	display: flex;
+	flex-direction: column;
 	width: 16%;
 }
 .range-container {
