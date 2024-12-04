@@ -21,7 +21,7 @@ if (product) {
 	console.log("Product not found for ID:", productId);
 }
 
-let productChilds = `
+`
 	<div class="product-data">
 
 			<div class="product-img">
@@ -47,9 +47,7 @@ let productChilds = `
           </ul>
 				  <div class="product-price-btn">
 					  <p><span>78</span>$</p>
-					  <button type="button" class="btn btn-outline-dark">buy now</button>
-					  <button type="button" class="btn btn-filled-dark" id="addToCartBtn">Add To Cart</button>
-					  <button type="button" class="btn btn-outline-like" id="likeBtn">Like</button>
+
 				  </div>
 				</div>
       </div>
@@ -60,9 +58,34 @@ let productChilds = `
 
 </div>
 
-
-
 				`;
+
+let productChilds = `
+   <div class="product_container">
+        <div class="image-container">
+            <img src="${product.image}" alt="img">
+        </div>
+        <div class="product-details">
+            <h1 class="title">${product.title}</h1>
+            <p class="description">${product.description}</p>
+            <p class="price">${product.price} <span class="discount">(${product.discount}% off)</span></p>
+            <p class="colors">Available Colors:
+                <span class="color-box red"></span>
+                <span class="color-box green"></span>
+                <span class="color-box blue"></span>
+            </p>
+            <p class="sizes">Available Sizes:
+                <span>S</span>, <span>M</span>, <span>L</span>, <span>XL</span>
+            </p>
+						<div class="btns-div">
+            <button type="button" class="btn btn-outline-dark">buy now</button>
+					  <button type="button" class="btn btn-filled-dark" id="addToCartBtn">Add To Cart</button>
+					  <button type="button" class="btn btn-outline-like" id="likeBtn">Like</button>
+						</div>
+        </div>
+    </div>
+
+`;
 
 let product_wrapper = document.getElementById("product-wrapper");
 product_wrapper.innerHTML = productChilds;

@@ -6,32 +6,25 @@ renderFooter();
 renderlocate();
 
 import { data } from "./data.js";
-
-// Get cart items from localStorage
 let cart = localStorage.getItem("cart");
-
 if (cart) {
-	cart = JSON.parse(cart).map((id) => Number(id)); // Ensure the cart IDs are numbers
+	cart = JSON.parse(cart).map((id) => Number(id));
 	console.log("Cart:", cart);
 } else {
 	console.log("Cart is empty");
 }
-// Initial quantities for each product in the cart
+
 let quantities = {};
 
-// Function to render the cart items
 function renderCartItems() {
 	const cartItemsContainer = document.getElementById("cart-items");
-	cartItemsContainer.innerHTML = ""; // Clear the container before rendering
+	cartItemsContainer.innerHTML = ""; // Clear
 
-	// Find the products in the data array that match the cart items
 	const cartItems = data.filter((item) => cart.includes(item.id));
 
 	cartItems.forEach((item) => {
-		// Default quantity is 1 if not already set
 		quantities[item.id] = quantities[item.id] || 1;
 
-		// Create a new div for each cart item
 		const cartItemDiv = document.createElement("div");
 		cartItemDiv.classList.add("cart-item");
 
@@ -53,8 +46,6 @@ function renderCartItems() {
 
       </div>
     `;
-
-		// Append the cart item to the container
 		cartItemsContainer.appendChild(cartItemDiv);
 	});
 
@@ -91,13 +82,10 @@ function handleDelete(event) {
 	const itemId = Number(event.target.dataset.id);
 	console.log(itemId);
 
-	// Remove item from cart array
 	cart = cart.filter((id) => id !== itemId);
 
-	// Update localStorage
 	localStorage.setItem("cart", JSON.stringify(cart));
 
-	// Re-render the cart items
 	renderCartItems();
 }
 

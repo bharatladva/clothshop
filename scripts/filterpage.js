@@ -38,23 +38,22 @@ function updateResults() {
 		return withinPriceRange && withinDiscountRange && matchesSelectedColors;
 	});
 
-	// Display the filtered items
 	displayResults(filteredItems);
 }
 
 // Event listeners for range input, discount input, and color checkboxes
 rangeInput.addEventListener("input", function () {
 	rangeValue.textContent = rangeInput.value;
-	updateResults(); // Update results on range input change
+	updateResults();
 });
 
 discountInput.addEventListener("input", function () {
 	discountValue.textContent = discountInput.value;
-	updateResults(); // Update results on discount input change
+	updateResults();
 });
 
 colorCheckboxes.forEach((checkbox) => {
-	checkbox.addEventListener("change", updateResults); // Update results on color selection change
+	checkbox.addEventListener("change", updateResults);
 });
 
 // Function to display filtered results
@@ -64,8 +63,6 @@ function displayResults(items) {
 		const itemElement = document.createElement("div");
 		itemElement.classList.add("item");
 		itemElement.innerHTML = `
-
-
 		<a class="card" href="./prodcutCard.html?id=${item.id}">
 					<div class="img">
 						<img

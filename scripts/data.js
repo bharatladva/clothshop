@@ -11,26 +11,29 @@ export let data = [
 		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		discount: 5,
 	},
+
 	{
 		id: 1,
-		color: ["red", "green"],
-		price: 20,
-		title: "Slide 2",
+		title: "T-Shirt",
 		description: "This is the second slide",
 		image: "images/woman/w2.3.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 20,
 		discount: 10,
+		color: ["red", "green"],
+		size: ["s", "m", "L", "XL"],
 	},
+
 	{
 		id: 2,
-		color: ["blue"],
-		price: 30,
-		title: "Slide 3",
+		title: "pent",
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 30,
 		discount: 7,
+		color: ["blue"],
+		size: ["s", "m", "L", "XL"],
 	},
+
 	{
 		color: ["red", "green", "blue"],
 		id: 3,
