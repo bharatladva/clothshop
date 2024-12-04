@@ -171,14 +171,16 @@
 } */
 
 .product-wrapper {
+	justify-self: center;
 	display: flex;
 	flex-wrap: wrap;
-	height: fit-content !important;
+
 	justify-content: center;
-	width: 90% !important;
 	min-width: fit-content;
 }
-.product-wrapper .product_container {
+.product-wrapper > .product_container {
+	width: 95%;
+	height: 60%;
 	display: flex;
 	flex-wrap: wrap;
 	background-color: white;
@@ -193,8 +195,7 @@
 
 .image-container img {
 	width: 100%;
-
-	height: auto;
+	height: 100%;
 	display: block;
 	object-fit: cover;
 }

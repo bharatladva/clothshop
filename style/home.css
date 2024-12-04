@@ -262,3 +262,132 @@ section.hero h1 {
 	width: 290px;
 	height: 320px;
 }
+
+.product-container {
+	padding: 1rem 0 5rem; /* Birinci sehv: Padding Elave etmemisdim*/
+	display: flex;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	column-gap: 20px;
+	position: relative;
+}
+.product-container::-webkit-scrollbar {
+	display: none;
+}
+.product-category {
+	text-transform: capitalize;
+}
+.product-card {
+	flex: 0 0 auto;
+	width: 250px;
+	/* height: 450px; 2-ci sehv Height yazmagim */
+	transition: transform 0.4s;
+}
+.product-card:hover {
+	transform: scale(1.1);
+}
+.product-img {
+	position: relative;
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+.discount-tag {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	color: #ff7d7d;
+	text-transform: capitalize;
+
+	box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.whislist-btn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -100%;
+	z-index: 1;
+	padding: 14px 20px;
+	width: 90%;
+	margin-inline: auto;
+	display: grid;
+	place-content: center;
+	background-color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+
+	box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.75);
+	transition: bottom 0.5s;
+}
+.product-img:hover .whislist-btn {
+	bottom: 10px;
+}
+.whislist-btn p {
+	color: black;
+	align-self: center;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 15px;
+	margin: 0;
+}
+.whislist-btn p:hover {
+	color: #ff7d7d;
+}
+.card-texts {
+	margin: 0 1rem 0 0.5rem;
+}
+
+.card-texts h1 {
+	font-size: 1.3rem;
+	margin-bottom: 0.75rem;
+	color: black;
+}
+.card-texts p {
+	color: black;
+	font-size: 15px;
+	margin-bottom: 0.5rem;
+	opacity: 0.5;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.card-texts h2 {
+	color: black;
+	font-size: 20px;
+	font-weight: 900;
+}
+.card-texts h2 > span {
+	opacity: 0.5;
+	text-decoration: line-through;
+	margin-left: 10px;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.women_collect,
+.men_collect,
+.accessour {
+	position: relative;
+}
+.women_collect h1,
+.men_collect h1,
+.accessour h1 {
+	position: absolute;
+	top: 35%;
+	left: 25%;
+	right: 25%;
+	text-align: center;
+	color: white;
+	font-size: 2rem;
+	font-weight: 400;
+}

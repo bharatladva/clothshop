@@ -63,6 +63,11 @@ function displayResults(items) {
 		const itemElement = document.createElement("div");
 		itemElement.classList.add("item");
 		itemElement.innerHTML = `
+
+
+
+
+
 		<a class="card" href="./prodcutCard.html?id=${item.id}">
 					<div class="img">
 						<img

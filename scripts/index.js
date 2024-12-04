@@ -9,18 +9,26 @@ let sliderChilds = data
 	.map(
 		(c, count) =>
 			`
-			<a class="card" href="./prodcutCard.html?id=${count}">
-					<div class="img">
-						<img
-							src="${c.image}"
-							alt=""
-							draggable="false"
-						/>
-					</div>
-					<h2>${c.title}</h2>
-					<span>${c.description}</span>
-				</a>
-				`
+			   <a href="./prodcutCard.html?id=${count}">
+
+                <div class="product-card" id="product-card">
+                <div class="product-img">
+                <span class="discount-tag">
+                ${100 - Math.round((c.price * 100) / c.discount)}% off</span>
+                <img src="${c.image}"
+                alt="card1" class="product-img">
+                <div class="whislist-btn"><p>add to whislist</p></div>
+                </div>
+                <div class="card-texts">
+                <h1>${c.title}</h1>
+                <p>${c.description}</p>
+                <h2>$${c.price}  <span> $${c.discount}</span></h2>
+                </div>
+                </div>
+
+                </a>
+
+			`
 	)
 	.reduce((p, c) => p + " " + c, "");
 // [1, 2, 3, 3].reduce((prev, curn) => {
