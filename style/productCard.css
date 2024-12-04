@@ -10,7 +10,7 @@
 }
 .product-wrapper > .product_container {
 	width: 95%;
-	height: 60%;
+	height: 70%;
 	display: flex;
 	flex-wrap: wrap;
 	background-color: white;
@@ -81,6 +81,9 @@
 .green {
 	background-color: green;
 }
+.blue {
+	background-color: blue;
+}
 
 .sizes {
 	font-size: 1.1rem;
@@ -88,6 +91,8 @@
 }
 
 .sizes span {
+	border: 1px solid black;
+	padding: 5px;
 	margin-right: 5px;
 }
 .btns-div {
