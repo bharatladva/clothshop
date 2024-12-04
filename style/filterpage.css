@@ -53,3 +53,36 @@ input[type="range"] {
 	width: 220px;
 	height: 300px;
 }
+
+.category-filters,
+.brand-filters,
+.size-filters {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: start;
+}
+
+.size-filters {
+	display: flex !important;
+	flex-direction: row;
+}
+
+.category-filters label,
+.brand-filters label,
+.size-filters label {
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.category-filters input[type="checkbox"],
+.brand-filters input[type="checkbox"],
+.size-filters input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	accent-color: #45413e; /* Same checkbox style for consistency */
+}

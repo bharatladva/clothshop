@@ -247,24 +247,19 @@ section.hero h1 {
 	justify-self: center;
 	align-self: center;
 	display: flex;
-	gap: 2rem;
+	gap: 4rem;
 	width: 100%;
 	min-width: fit-content;
 	flex-wrap: wrap;
 
-	padding: 20px 30px;
+	padding: 20px 60px;
 	background-color: #dfdada;
 	border-radius: 20px;
 	height: 75vh;
 }
 
-.flex-card .card {
-	width: 290px;
-	height: 320px;
-}
-
 .product-container {
-	padding: 1rem 0 5rem; /* Birinci sehv: Padding Elave etmemisdim*/
+	padding: 1rem 0 5rem;
 	display: flex;
 	overflow-x: scroll;
 	scroll-behavior: smooth;

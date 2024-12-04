@@ -3,13 +3,17 @@
 export let data = [
 	{
 		id: 0,
-		price: 10,
-		color: ["red", "green", "blue"],
 		title: "Slide 1",
 		description: "This is the first slide",
 		image: "images/woman/w1.2.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 10,
 		discount: 5,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 
 	{
@@ -28,108 +32,123 @@ export let data = [
 
 	{
 		id: 2,
-		title: "pent",
+		title: "Pent",
 		description: "This is the third slide",
 		image: "images/woman/w2.4.jpg",
 		price: 30,
 		discount: 7,
 		for: ["Men", "Boys"],
-		catagary: ["Tshirts", "Shirts", "Sweatshirts", "Jackets"],
+		catagary: ["Shirts", "Sweatshirts"],
 		brand: ["nike", "puma", "addidas"],
 		color: ["blue"],
 		size: ["s", "m", "L", "XL"],
 	},
 
 	{
-		color: ["red", "green", "blue"],
 		id: 3,
-		price: 40,
 		title: "Slide 4",
 		description: "This is the third slide",
 		image: "images/woman/w3.2.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 40,
 		discount: 12,
-	},
-	{
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
 		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+	},
+
+	{
 		id: 4,
-		price: 50,
 		title: "Slide 5",
 		description: "This is the third slide",
 		image: "images/woman/w4.2.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 50,
 		discount: 8,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
+
 	{
 		id: 5,
-		color: ["red", "green", "blue"],
-		price: 60,
 		title: "Slide 6",
 		description: "This is the third slide",
 		image: "images/woman/w4.1.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 60,
 		discount: 15,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
+
 	{
 		id: 6,
-		color: ["red", "green", "blue"],
-		price: 70,
 		title: "Slide 7",
 		description: "This is the third slide",
 		image: "images/woman/w6.2.jpg",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		price: 70,
 		discount: 10,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
+
 	{
 		id: 7,
-		color: ["red", "green", "blue"],
-		price: 80,
 		title: "Slide 8",
 		description: "This is the third slide",
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 		image: "images/woman/w7.2.jpg",
+		price: 80,
 		discount: 20,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
+
 	{
 		id: 8,
-		color: ["red", "green", "blue"],
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
-		price: 90,
 		title: "Slide 9",
 		description: "This is the third slide",
 		image: "images/woman/w7.jpg",
+		price: 90,
 		discount: 18,
-	},
-	{
-		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
 		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
+	},
+
+	{
 		id: 9,
-		price: 100,
 		title: "Slide 10",
 		description: "This is the third slide",
 		image: "images/woman/w5.1.jpg",
+		price: 100,
 		discount: 25,
+		for: ["Men", "Women", "Boys", "Girls"],
+		catagary: ["Tshirts", "Shirts", "Dresses", "Sweatshirts", "Jackets"],
+		brand: ["nike", "puma", "addidas"],
+		color: ["red", "green", "blue"],
+		size: ["s", "m", "L", "XL"],
+		comments: [{ name: "bharat ladva", comment: "sdfgh" }],
 	},
 ];
-
-// export function updateDataById(id, updatedObject) {
-// 	// Convert id to a number to ensure proper comparison
-// 	const index = data.findIndex((item) => item.id === Number(id));
-// 	console.log("Updated Object:", updatedObject);
-
-// 	if (index !== -1) {
-// 		console.log("Found product at index", index);
-
-// 		// Merge the existing item with the new object properties
-// 		data[index] = { ...data[index], ...updatedObject };
-// 		console.log("Data after update:", data[index]); // Log updated data
-// 		return true;
-// 	}
-
-// 	console.log("No product found for ID", id);
-// 	return false;
-// }
-// setInterval(() => console.log(data), 1000);
 
 export const catagary = [
 	{
@@ -151,7 +170,7 @@ export const catagary = [
 		li5: "Shoes",
 	},
 	{
-		title: "Kids' Clothing",
+		title: "Boys' Clothing",
 		image: "images/woman/w5.1.jpg",
 		li1: "T-Shirts",
 		li2: "Shirts",
@@ -160,7 +179,7 @@ export const catagary = [
 		li5: "Jackets",
 	},
 	{
-		title: "Kids' Clothing",
+		title: "Girlss' Clothing",
 		image: "images/woman/w5.1.jpg",
 		li1: "T-Shirts",
 		li2: "Shirts",
