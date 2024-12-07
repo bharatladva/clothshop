@@ -13,16 +13,17 @@ let sliderChilds = data
 
                 <div class="product-card" id="product-card">
                 <div class="product-img">
-                <span class="discount-tag">
-                ${100 - Math.round((c.price * 100) / c.discount)}% off</span>
+                <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
                 <img src="${c.image}"
                 alt="card1" class="product-img">
-                <div class="whislist-btn"><p>add to whislist</p></div>
+                <div class="whislist-btn">
+								<p id="likeBtn"  data-id="${c.id}">add to whislist</p>
+								</div>
                 </div>
                 <div class="card-texts">
                 <h1>${c.title}</h1>
                 <p>${c.description}</p>
-                <h2>$${c.price}  <span> $${c.discount}</span></h2>
+                <h2>$${c.price}  <span class="discount-tag"> $${c.discount}% off</span></h2>
                 </div>
                 </div>
 
@@ -31,10 +32,6 @@ let sliderChilds = data
 			`
 	)
 	.reduce((p, c) => p + " " + c, "");
-// [1, 2, 3, 3].reduce((prev, curn) => {
-// 	console.log(prev, curn);
-// 	return curn + prev;
-// }, 0);
 
 document.addEventListener("DOMContentLoaded", function () {
 	const carousel = document.querySelector(".carousel");
@@ -53,29 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
 		timeoutId;
 
 	const dragStart = (e) => {
-		// this func for mouse daraging
+		// this func for mouse dragging
 		isDragging = true;
 		carousel.classList.add("dragging");
 		startX = e.pageX; //provides the horizontal coordinate of the mouse pointer relative to the entire document.
 		startScrollLeft = carousel.scrollLeft;
-		console.log("erfg", crousel.scrollLeft, e.pageX);
+		console.log("erfg", carousel.scrollLeft, e.pageX); // Fixed typo "crousel" to "carousel"
 	};
 
 	const dragging = (e) => {
 		if (!isDragging) return;
 
-		// Calculate the new scroll position
 		const newScrollLeft = startScrollLeft - (e.pageX - startX);
 
-		// Check if the new scroll position exceeds
-		// the carousel boundaries
 		if (newScrollLeft <= 0 || newScrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
-			// If so, prevent further dragging
 			isDragging = false;
 			return;
 		}
 
-		// Otherwise, update the scroll position of the carousel
 		carousel.scrollLeft = newScrollLeft;
 	};
 
@@ -85,17 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 	const autoPlay = () => {
-		if (window.innerWidth < 800) return; // stop is in smole srcreen
+		if (window.innerWidth < 800) return;
 
-		const totalCardWidth = carousel.scrollWidth; // Calculate the total width of all cards
-
-		// Calculate the maximum scroll position
+		const totalCardWidth = carousel.scrollWidth;
 		const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
 
-		// If the carousel is at the end, stop autoplay
 		if (carousel.scrollLeft >= maxScrollLeft) return;
 
-		// Autoplay the carousel after every 2500ms
 		timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2000);
 	};
 
@@ -109,6 +97,38 @@ document.addEventListener("DOMContentLoaded", function () {
 	arrowBtns.forEach((btn) => {
 		btn.addEventListener("click", () => {
 			carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+		});
+	}); // <-- Closing bracket for forEach
+
+	const addToCartBtnS = document.querySelectorAll("#addToCartBtn");
+	addToCartBtnS.forEach((btn) => {
+		btn.addEventListener("click", (event) => {
+			event.preventDefault();
+			const itemId = Number(event.target.dataset.id);
+			let cart = JSON.parse(localStorage.getItem("cart")) || [];
+			if (!cart.includes(itemId)) {
+				cart.push(itemId);
+				localStorage.setItem("cart", JSON.stringify(cart));
+				// alert("Product liked!");
+			} else {
+				// alert("Product already liked!");
+			}
+		});
+	});
+
+	const likeBtns = document.querySelectorAll("#likeBtn");
+	likeBtns.forEach((btn) => {
+		btn.addEventListener("click", (event) => {
+			event.preventDefault();
+			const itemId = Number(event.target.dataset.id);
+			let likes = JSON.parse(localStorage.getItem("likes")) || [];
+			if (!likes.includes(itemId)) {
+				likes.push(itemId);
+				localStorage.setItem("likes", JSON.stringify(likes));
+				// alert("Product liked!");
+			} else {
+				// alert("Product already liked!");
+			}
 		});
 	});
 });
