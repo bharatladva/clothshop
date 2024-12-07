@@ -110,25 +110,26 @@ colorCheckboxes.forEach((checkbox) => {
 // Function to display filtered results
 function displayResults(items) {
 	resultContainer.innerHTML = ""; // Clear previous results
-	items.forEach((item) => {
+	items.forEach((c) => {
 		const itemElement = document.createElement("div");
 		itemElement.classList.add("item");
 		itemElement.innerHTML = `
 
-       <a href="./prodcutCard.html?id=${item.id}">
+       <a href="./prodcutCard.html?id=${c.id}">
 
                 <div class="product-card" id="product-card">
                 <div class="product-img">
-                <span class="discount-tag">
-                ${100 - Math.round((item.price * 100) / item.discount)}% off</span>
-                <img src="${item.image}"
+                <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
+                <img src="${c.image}"
                 alt="card1" class="product-img">
-                <div class="whislist-btn"><p>add to whislist</p></div>
+                <div class="whislist-btn">
+								<p id="likeBtn"  data-id="${c.id}">add to whislist</p>
+								</div>
                 </div>
                 <div class="card-texts">
-                <h1>${item.title}</h1>
-                <p>${item.description}</p>
-                <h2>$${item.price}  <span> $${item.discount}</span></h2>
+                <h1>${c.title}</h1>
+                <p>${c.description}</p>
+                <h2>$${c.price}  <span class="discount-tag"> $${c.discount}% off</span></h2>
                 </div>
                 </div>
 

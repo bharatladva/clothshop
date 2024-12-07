@@ -119,3 +119,41 @@ export const renderlocate = () => {
 		locate.innerHTML = locatedata;
 	}
 };
+
+// eventHandlers.js
+
+export function setupAddToCart() {
+	const addToCartBtnS = document.querySelectorAll("#addToCartBtn");
+	addToCartBtnS.forEach((btn) => {
+		btn.addEventListener("click", (event) => {
+			event.preventDefault();
+			const itemId = Number(event.target.dataset.id);
+			let cart = JSON.parse(localStorage.getItem("cart")) || [];
+			if (!cart.includes(itemId)) {
+				cart.push(itemId);
+				localStorage.setItem("cart", JSON.stringify(cart));
+				// alert("Product added to cart!");
+			} else {
+				// alert("Product already in cart!");
+			}
+		});
+	});
+}
+
+export function setupLikeBtns() {
+	const likeBtns = document.querySelectorAll("#likeBtn");
+	likeBtns.forEach((btn) => {
+		btn.addEventListener("click", (event) => {
+			event.preventDefault();
+			const itemId = Number(event.target.dataset.id);
+			let likes = JSON.parse(localStorage.getItem("likes")) || [];
+			if (!likes.includes(itemId)) {
+				likes.push(itemId);
+				localStorage.setItem("likes", JSON.stringify(likes));
+				// alert("Product liked!");
+			} else {
+				// alert("Product already liked!");
+			}
+		});
+	});
+}

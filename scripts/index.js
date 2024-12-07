@@ -1,6 +1,12 @@
 /** @format */
 import { data, catagary } from "./data.js";
-import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
+import {
+	renderNav,
+	renderFooter,
+	renderlocate,
+	setupAddToCart,
+	setupLikeBtns,
+} from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
@@ -98,39 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		btn.addEventListener("click", () => {
 			carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
 		});
-	}); // <-- Closing bracket for forEach
-
-	const addToCartBtnS = document.querySelectorAll("#addToCartBtn");
-	addToCartBtnS.forEach((btn) => {
-		btn.addEventListener("click", (event) => {
-			event.preventDefault();
-			const itemId = Number(event.target.dataset.id);
-			let cart = JSON.parse(localStorage.getItem("cart")) || [];
-			if (!cart.includes(itemId)) {
-				cart.push(itemId);
-				localStorage.setItem("cart", JSON.stringify(cart));
-				// alert("Product liked!");
-			} else {
-				// alert("Product already liked!");
-			}
-		});
 	});
 
-	const likeBtns = document.querySelectorAll("#likeBtn");
-	likeBtns.forEach((btn) => {
-		btn.addEventListener("click", (event) => {
-			event.preventDefault();
-			const itemId = Number(event.target.dataset.id);
-			let likes = JSON.parse(localStorage.getItem("likes")) || [];
-			if (!likes.includes(itemId)) {
-				likes.push(itemId);
-				localStorage.setItem("likes", JSON.stringify(likes));
-				// alert("Product liked!");
-			} else {
-				// alert("Product already liked!");
-			}
-		});
-	});
+	setupAddToCart();
+	setupLikeBtns();
 });
 
 let flex_card = document.getElementById("flex-card");

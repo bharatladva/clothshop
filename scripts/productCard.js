@@ -51,32 +51,6 @@ let productChilds = `
 let product_wrapper = document.getElementById("product-wrapper");
 product_wrapper.innerHTML = productChilds;
 
-// Add to Cart Functionality
-const addToCartBtn = document.getElementById("addToCartBtn");
-addToCartBtn.addEventListener("click", () => {
-	let cart = JSON.parse(localStorage.getItem("cart")) || [];
-	if (!cart.includes(productId)) {
-		cart.push(productId);
-		localStorage.setItem("cart", JSON.stringify(cart));
-		// alert("Product added to cart!");
-	} else {
-		// alert("Product already in cart!");
-	}
-});
-
-// Add Like Functionality
-const likeBtn = document.getElementById("likeBtn");
-likeBtn.addEventListener("click", () => {
-	let likes = JSON.parse(localStorage.getItem("likes")) || [];
-	if (!likes.includes(productId)) {
-		likes.push(productId);
-		localStorage.setItem("likes", JSON.stringify(likes));
-		// alert("Product liked!");
-	} else {
-		// alert("Product already liked!");
-	}
-});
-
 // Generate grid of products
 let gridChilds = data
 	.map((c, count) => {
@@ -103,7 +77,7 @@ let gridChilds = data
 <div class="${className}">
    <a href="./prodcutCard.html?id=${count}">
 
-                 <div class="product-card" id="product-card">
+                <div class="product-card" id="product-card">
                 <div class="product-img">
                 <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
                 <img src="${c.image}"
@@ -129,3 +103,35 @@ let gridChilds = data
 
 let grid_wrapper = document.getElementById("grid-wrapper");
 grid_wrapper.innerHTML = gridChilds;
+
+const addToCartBtnS = document.querySelectorAll("#addToCartBtn");
+addToCartBtnS.forEach((btn) => {
+	btn.addEventListener("click", (event) => {
+		event.preventDefault();
+		const itemId = Number(event.target.dataset.id);
+		let cart = JSON.parse(localStorage.getItem("cart")) || [];
+		if (!cart.includes(itemId)) {
+			cart.push(itemId);
+			localStorage.setItem("cart", JSON.stringify(cart));
+			// alert("Product liked!");
+		} else {
+			// alert("Product already liked!");
+		}
+	});
+});
+
+const likeBtns = document.querySelectorAll("#likeBtn");
+likeBtns.forEach((btn) => {
+	btn.addEventListener("click", (event) => {
+		event.preventDefault();
+		const itemId = Number(event.target.dataset.id);
+		let likes = JSON.parse(localStorage.getItem("likes")) || [];
+		if (!likes.includes(itemId)) {
+			likes.push(itemId);
+			localStorage.setItem("likes", JSON.stringify(likes));
+			// alert("Product liked!");
+		} else {
+			// alert("Product already liked!");
+		}
+	});
+});
