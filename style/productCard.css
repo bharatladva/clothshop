@@ -7,13 +7,14 @@
 
 	justify-content: center;
 	min-width: fit-content;
+	height: 70%;
 }
 .product-wrapper > .product_container {
 	width: 95%;
-	height: 70%;
+	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: white;
+
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
