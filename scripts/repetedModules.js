@@ -178,6 +178,32 @@ export function createProductCard(product) {
         </a>
     `;
 }
+export function createcollectionsCard(product) {
+	return `
+      	<li
+					class="card-large card-dark card-wide"
+					id="serv-groom"
+				>
+					<div class="card-image">
+						<img
+							src="${product.image}"
+						/>
+					</div>
+					<ul>
+					<h2>   ${product.collectionName}   </h2>
+
+						<span class="subtitle">${product.subtitle}</span
+						>
+						<li><a href="#">${product.products[0].name}</a><span>${product.products[0].quantity}</span></li>
+						<li><a href="#">${product.products[1].name}</a><span>${product.products[1].quantity}</span></li>
+						<li><a href="#">${product.products[2].name}</a><span>${product.products[2].quantity}</span></li>
+						<button class="btn btn-filled-dark">
+							<span class="icone calendar-icone"></span>Book Now
+						</button>
+					</ul>
+				</li>
+    `;
+}
 
 // eventHandlers.js
 

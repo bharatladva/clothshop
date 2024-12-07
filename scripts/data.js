@@ -293,7 +293,7 @@ export let data = [
 export const catagary = [
 	{
 		title: "Men's Clothing",
-		image: "images/men/full-length-fashionable-young-man-casual-clothing-adjusting-eyewear-with-smile-while-standing-against-red-wall_425904-4134-small.png",
+		image: "images/men/portrait-confident-handsome-young-man-hant-sunglasses-white-background_171337-78412-small.png",
 		li1: "T-Shirts",
 		li2: "Shirts",
 		li3: "Pants",
@@ -302,7 +302,7 @@ export const catagary = [
 	},
 	{
 		title: "Women's Clothing",
-		image: "images/woman/portrait-woman-suit-blazer-fashion-glamor-isolated-background-high-quality-photo_163305-249375-small.png",
+		image: "images/woman/cheerful-young-woman-wearing-sunglasses-red-beret-celebrating-holding-bottle-champagne-glass_171337-53886-small.png",
 		li1: "Dresses",
 		li2: "Skirts",
 		li3: "Pants",
@@ -328,5 +328,30 @@ export const catagary = [
 		li3: "Pants",
 		li4: "Sweaters",
 		li5: "Jackets",
+	},
+];
+
+export const collections = [
+	{
+		id: "serv-groom",
+		collectionName: "Man Collection",
+		image: "images/men/full-length-fashionable-young-man-casual-clothing-adjusting-eyewear-with-smile-while-standing-against-red-wall_425904-4134-small.png",
+		subtitle: "Tail-wagging transformations are our specialty.",
+		products: [
+			{ name: "Jackets", quantity: 80 },
+			{ name: "T-Shirts", quantity: 16 },
+			{ name: "Sweaters", quantity: 160 },
+		],
+	},
+	{
+		id: "serv-board",
+		collectionName: "Woman Collection",
+		image: "images/woman/portrait-woman-suit-blazer-fashion-glamor-isolated-background-high-quality-photo_163305-249375-small.png",
+		subtitle: "Where fun and care never take a day off.",
+		products: [
+			{ name: "Dresses", quantity: 80 },
+			{ name: "Skirts", quantity: 80 },
+			{ name: "Jackets", quantity: 80 },
+		],
 	},
 ];

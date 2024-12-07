@@ -1,5 +1,5 @@
 /** @format */
-import { data, catagary } from "./data.js";
+import { data, catagary, collections } from "./data.js";
 import {
 	renderNav,
 	renderFooter,
@@ -7,6 +7,7 @@ import {
 	setupAddToCart,
 	setupLikeBtns,
 	createProductCard,
+	createcollectionsCard,
 } from "./repetedModules.js";
 
 renderNav();
@@ -14,6 +15,11 @@ renderFooter();
 renderlocate();
 
 let sliderChilds = data.map((c) => createProductCard(c)).reduce((p, c) => p + " " + c, "");
+
+let collectionsChilds = collections
+	.map((c) => createcollectionsCard(c))
+	.reduce((p, c) => p + " " + c, "");
+const collectionsDiv = (document.querySelector(".services").innerHTML = collectionsChilds);
 
 document.addEventListener("DOMContentLoaded", function () {
 	const carousel = document.querySelector(".carousel");
