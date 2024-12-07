@@ -52,6 +52,35 @@ export const renderNav = () => {
 
 export const footerData = `
 
+	<div class="col">
+				<div>
+			     	<img
+				    	class="footer-logo"
+				    	src="images/Shirt Icons.svg"
+				    	alt="logo"
+			     	/>
+			    	<span>
+			         	bharat's <br />
+                cloths Store
+				     </span>
+				</div>
+
+
+				<h4>Contact</h4>
+				<p><strong>Address:</strong> 562 Maryland Ave, Downer road, Milwaukee</p>
+				<p><strong>Phone:</strong> +1 111 1111/ +1 2345 678</p>
+				<p><strong>Hours:</strong> 10:00 AM - 18:00 PM, Mon - Sat</p>
+				<div class="follow">
+					<h4>Follow us</h4>
+					<div class="icon">
+						<i class="fab fa-facebook-f"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-pinterest-p"></i>
+						<i class="fab fa-youtube"></i>
+					</div>
+				</div>
+			</div>
 <ul>
 				Categories
 				<li><a href="#">Men's Clothing</a></li>
@@ -85,6 +114,10 @@ export const footerData = `
 				<li><a href="#">Contact Us</a></li>
 				<li><a href="#">Devloper</a></li>
 			</ul>
+
+				<div class="copyright">
+				<p>© Bharat Ladva - Clothing Ecommerce Website</p>
+			</div>
 
 `;
 
