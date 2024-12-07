@@ -5,13 +5,14 @@
 	flex: 1;
 	position: relative;
 	display: flex;
-	flex-direction: column;
 
+	flex-direction: column;
 	transition: var(--hover-timing);
 	cursor: pointer;
 }
 
 .card-large {
+	justify-content: space-between;
 	box-shadow: var(--card-shadow);
 	border-radius: 12px;
 	overflow: hidden;
@@ -252,10 +253,10 @@ section.hero h1 {
 	min-width: fit-content;
 	flex-wrap: wrap;
 
-	padding: 20px 60px;
-	background-color: #dfdada;
+	padding: 30px 60px;
+	background-color: #f0eded;
 	border-radius: 20px;
-	height: 75vh;
+	height: fit-content;
 }
 
 .product-container {

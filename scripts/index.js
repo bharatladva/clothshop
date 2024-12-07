@@ -109,10 +109,11 @@ let catagarydata = catagary
 						<li><a href="#">${c.li3}</a></li>
 						<li><a href="#">${c.li4}</a></li>
 
-						<button class="btn btn-outline-light">
-							Shop All<span class="material-symbols-outlined"> > </span>
-						</button>
+
 					</ul>
+					<button class="btn btn-outline-light">
+							Shop All<span class="icone right-icone"></span>
+					</button>
 					</div>
 				</li>`
 	)

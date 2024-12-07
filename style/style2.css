@@ -68,7 +68,10 @@ body {
 }
 
 .left-icone {
-	background-image: url("../images/icones//Search\ Icons.svg");
+	background-image: url("../images/icones/Chevron\ left\ Icons.svg");
+}
+.right-icone {
+	background-image: url("../images/icones/Ic\ Icons.svg");
 }
 
 .calendar-icone {
