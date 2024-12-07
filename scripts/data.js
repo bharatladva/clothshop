@@ -263,7 +263,7 @@ export let data = [
 
 	{
 		id: 18,
-		title: "Men's Running Shorts",
+		title: "Men's  Shorts",
 		description: "Lightweight shorts for running.",
 		image: "images/men/full-length-portrait-casual-man-standing-with-legs-crossed-gray-wall_171337-83289-small.png",
 		price: 20,

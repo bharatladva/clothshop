@@ -24,6 +24,9 @@ export const navData = `
         <li>
             <a href="#">About Us</a>
         </li>
+        <li>
+            <a href="./contact.html">Contact Us</a>
+        </li>
     </ul>
     <div id="utility">
         <span class="search-icone icone"> </span>
