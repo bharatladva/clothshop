@@ -1,7 +1,14 @@
 /** @format */
 
 import { data } from "./data.js";
-import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
+import {
+	renderNav,
+	renderFooter,
+	renderlocate,
+	setupAddToCart,
+	setupLikeBtns,
+	createProductCard,
+} from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
@@ -72,66 +79,12 @@ let gridChilds = data
 				className = "";
 		}
 
-		return `
-
-<div class="${className}">
-   <a href="./prodcutCard.html?id=${count}">
-
-                <div class="product-card" id="product-card">
-                <div class="product-img">
-                <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
-                <img src="${c.image}"
-                alt="card1" class="product-img">
-                <div class="whislist-btn">
-								<p id="likeBtn"  data-id="${c.id}">add to whislist</p>
-								</div>
-                </div>
-                <div class="card-texts">
-                <h1>${c.title}</h1>
-                <p>${c.description}</p>
-                <h2>$${c.price}  <span class="discount-tag"> $${c.discount}% off</span></h2>
-                </div>
-                </div>
-
-
-                </a>
-
-    </div>
-    `;
+		return createProductCard(c);
 	})
 	.reduce((p, c) => p + " " + c, ""); // Combine all the mapped elements into a single string
 
 let grid_wrapper = document.getElementById("grid-wrapper");
 grid_wrapper.innerHTML = gridChilds;
 
-const addToCartBtnS = document.querySelectorAll("#addToCartBtn");
-addToCartBtnS.forEach((btn) => {
-	btn.addEventListener("click", (event) => {
-		event.preventDefault();
-		const itemId = Number(event.target.dataset.id);
-		let cart = JSON.parse(localStorage.getItem("cart")) || [];
-		if (!cart.includes(itemId)) {
-			cart.push(itemId);
-			localStorage.setItem("cart", JSON.stringify(cart));
-			// alert("Product liked!");
-		} else {
-			// alert("Product already liked!");
-		}
-	});
-});
-
-const likeBtns = document.querySelectorAll("#likeBtn");
-likeBtns.forEach((btn) => {
-	btn.addEventListener("click", (event) => {
-		event.preventDefault();
-		const itemId = Number(event.target.dataset.id);
-		let likes = JSON.parse(localStorage.getItem("likes")) || [];
-		if (!likes.includes(itemId)) {
-			likes.push(itemId);
-			localStorage.setItem("likes", JSON.stringify(likes));
-			// alert("Product liked!");
-		} else {
-			// alert("Product already liked!");
-		}
-	});
-});
+setupAddToCart();
+setupLikeBtns();

@@ -120,6 +120,29 @@ export const renderlocate = () => {
 	}
 };
 
+// productCard.js
+
+export function createProductCard(product) {
+	return `
+        <a href="./prodcutCard.html?id=${product.id}">
+            <div class="product-card" id="product-card">
+                <div class="product-img">
+                    <span class="cart-tag icone cart-icone" data-id="${product.id}" id="addToCartBtn"></span>
+                    <img src="${product.image}" alt="card1" class="product-img">
+                    <div class="whislist-btn">
+                        <p id="likeBtn" data-id="${product.id}">add to whislist</p>
+                    </div>
+                </div>
+                <div class="card-texts">
+                    <h1>${product.title}</h1>
+                    <p>${product.description}</p>
+                    <h2>$${product.price}  <span class="discount-tag"> $${product.discount}% off</span></h2>
+                </div>
+            </div>
+        </a>
+    `;
+}
+
 // eventHandlers.js
 
 export function setupAddToCart() {

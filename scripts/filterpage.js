@@ -1,7 +1,7 @@
 /** @format */
 
 import { data, catagary } from "./data.js";
-import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
+import { renderNav, renderFooter, renderlocate, createProductCard } from "./repetedModules.js";
 renderNav();
 renderFooter();
 renderlocate();
@@ -113,29 +113,7 @@ function displayResults(items) {
 	items.forEach((c) => {
 		const itemElement = document.createElement("div");
 		itemElement.classList.add("item");
-		itemElement.innerHTML = `
-
-       <a href="./prodcutCard.html?id=${c.id}">
-
-                <div class="product-card" id="product-card">
-                <div class="product-img">
-                <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
-                <img src="${c.image}"
-                alt="card1" class="product-img">
-                <div class="whislist-btn">
-								<p id="likeBtn"  data-id="${c.id}">add to whislist</p>
-								</div>
-                </div>
-                <div class="card-texts">
-                <h1>${c.title}</h1>
-                <p>${c.description}</p>
-                <h2>$${c.price}  <span class="discount-tag"> $${c.discount}% off</span></h2>
-                </div>
-                </div>
-
-                </a>
-
-        `;
+		itemElement.innerHTML = createProductCard(c);
 		resultContainer.appendChild(itemElement);
 	});
 }

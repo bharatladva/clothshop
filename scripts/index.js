@@ -6,38 +6,14 @@ import {
 	renderlocate,
 	setupAddToCart,
 	setupLikeBtns,
+	createProductCard,
 } from "./repetedModules.js";
+
 renderNav();
 renderFooter();
 renderlocate();
 
-let sliderChilds = data
-	.map(
-		(c, count) =>
-			`
-			   <a href="./prodcutCard.html?id=${count}">
-
-                <div class="product-card" id="product-card">
-                <div class="product-img">
-                <span class="cart-tag icone cart-icone" data-id="${c.id}" id="addToCartBtn" ></span>
-                <img src="${c.image}"
-                alt="card1" class="product-img">
-                <div class="whislist-btn">
-								<p id="likeBtn"  data-id="${c.id}">add to whislist</p>
-								</div>
-                </div>
-                <div class="card-texts">
-                <h1>${c.title}</h1>
-                <p>${c.description}</p>
-                <h2>$${c.price}  <span class="discount-tag"> $${c.discount}% off</span></h2>
-                </div>
-                </div>
-
-                </a>
-
-			`
-	)
-	.reduce((p, c) => p + " " + c, "");
+let sliderChilds = data.map((c) => createProductCard(c)).reduce((p, c) => p + " " + c, "");
 
 document.addEventListener("DOMContentLoaded", function () {
 	const carousel = document.querySelector(".carousel");
