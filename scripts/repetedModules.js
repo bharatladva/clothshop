@@ -64,7 +64,7 @@ export const footerData = `
                 cloths Store
 				     </span>
 				</div>
-
+				<br/>
 
 				<h4>Contact</h4>
 				<p><strong>Address:</strong> 562 Maryland Ave, Downer road, Milwaukee</p>
@@ -112,7 +112,7 @@ export const footerData = `
 				<li><a href="#">Sustainability</a></li>
 				<li><a href="#">Careers</a></li>
 				<li><a href="#">Contact Us</a></li>
-				<li><a href="#">Devloper</a></li>
+				<li    ><a  class="devloper-btn" href="https://bharatladva.github.io/cv/">Devloper</a></li>
 			</ul>
 
 				<div class="copyright">

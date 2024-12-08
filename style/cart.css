@@ -7,6 +7,7 @@
 	padding: 20px;
 	background-color: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
 }
 
 .cart-container .cart-item {
@@ -16,10 +17,12 @@
 	margin-bottom: 20px;
 	padding: 10px;
 	border: 1px solid #ddd;
+	border-radius: 10px;
 }
 
 .cart-item img {
-	max-width: 100px;
+	border-radius: 10px;
+	max-width: 125px;
 	margin-right: 20px;
 }
 
@@ -65,12 +68,13 @@
 
 .cart-summary {
 	display: flex;
-	align-items: center;
+	height: 75px;
 	justify-content: center;
+	align-items: center;
 	gap: 40px;
 	margin-top: 20px;
 	padding: 10px;
-	border-top: 1px solid #ddd;
+
 	text-align: right;
 }
 
