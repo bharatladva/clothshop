@@ -308,18 +308,24 @@ section.hero h1 {
 
 .whislist-btn {
 	position: absolute;
+	display: flex;
 	left: 0;
 	right: 0;
 	bottom: -100%;
 	z-index: 1;
-	padding: 14px 20px;
-	width: 90%;
+	padding: 10px 20px;
+	width: 55%;
 	margin-inline: auto;
-	display: grid;
 	place-content: center;
 	background-color: #fff;
 	border-radius: 10px;
 	cursor: pointer;
+	gap: 5px;
+}
+
+.whislist-btn .icone {
+	width: 20px;
+	height: 20px;
 }
 .product-img:hover .whislist-btn {
 	bottom: 10px;

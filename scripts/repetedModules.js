@@ -166,7 +166,8 @@ export function createProductCard(product) {
                     <span class="cart-tag icone cart-icone" data-id="${product.id}" id="addToCartBtn"></span>
                     <img src="${product.image}" alt="card1" class="product-img">
                     <div class="whislist-btn">
-                        <p id="likeBtn" data-id="${product.id}">add to whislist</p>
+										 <span class="icone like-icone"></span>
+                        <p id="likeBtn" data-id="${product.id}">whislist</p>
                     </div>
                 </div>
                 <div class="card-texts">
