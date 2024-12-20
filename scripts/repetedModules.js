@@ -208,7 +208,7 @@ export function createcollectionsCard(product) {
 export function productGalaryCard(product) {
 	return `
       <li
-			class="item"
+			class="productGalaryitem"
 			style="
 				background-image: url('${product.image}');
 			"
