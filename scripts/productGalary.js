@@ -32,7 +32,7 @@ let flex_card = document.getElementById("flex-card");
 flex_card.innerHTML = firstTenCardsFlexCard;
 
 function activate(e) {
-	const items = document.querySelectorAll(".item");
+	const items = document.querySelectorAll(".productGalaryitem");
 	if (e.target.matches(".next")) {
 		slider.append(items[0]);
 	}
