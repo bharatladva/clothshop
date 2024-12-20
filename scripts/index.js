@@ -92,8 +92,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	setupLikeBtns();
 });
 
+let firstTenCards = data
+	.slice(0, 10)
+	.map((c) => createProductCard(c))
+	.reduce((p, c) => p + " " + c, "");
+
+// Next 10 items from data
+let secondTenCards = data
+	.slice(10, 20)
+	.map((c) => createProductCard(c))
+	.reduce((p, c) => p + " " + c, "");
+
 let flex_card = document.getElementById("flex-card");
-flex_card.innerHTML = sliderChilds;
+flex_card.innerHTML = firstTenCards;
+let flex_card2 = document.getElementById("flex-card2");
+flex_card2.innerHTML = secondTenCards;
 
 let catagarydata = catagary
 	.map(

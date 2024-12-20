@@ -14,13 +14,15 @@ export const navData = `
     </a>
     <ul class="navigation-menu">
         <li>
+
             <a  href="./filterpage.html"
-						>Disover</a>
+						> 	 <span class="search-icone icone"> </span>Disover</a>
         </li>
         <li>
             <a href="#">Services</a>
         </li>
-        <li><a href="#locate">Locations &amp; Hours</a></li>
+        <li><a href="#locate">Woman</a></li>
+        <li><a href="#locate">man</a></li>
         <li>
             <a href="#">About Us</a>
         </li>
@@ -29,7 +31,7 @@ export const navData = `
         </li>
     </ul>
     <div id="utility">
-        <span class="search-icone icone"> </span>
+
         <a
             class="icone cart-icone"
             href="./cart.html"
@@ -130,7 +132,7 @@ export const renderFooter = () => {
 };
 
 export const locatedata = `
-<div>
+<div class="scrollAnime">
 				<h2>Location &amp; Hours</h2>
 				<p>
 					Our knowledgeable and friendly staff is always ready to assist you in making the
@@ -161,7 +163,7 @@ export const renderlocate = () => {
 export function createProductCard(product) {
 	return `
         <a href="./prodcutCard.html?id=${product.id}">
-            <div class="product-card" id="product-card">
+            <div class="product-card " id="product-card">
                 <div class="product-img">
                     <span class="cart-tag icone cart-icone" data-id="${product.id}" id="addToCartBtn"></span>
                     <img src="${product.image}" alt="card1" class="product-img">

@@ -17,7 +17,6 @@
 	border-radius: 12px;
 	overflow: hidden;
 	height: 600px;
-	/*    padding-bottom: 32px;*/
 }
 
 .card-large:hover {
@@ -91,11 +90,6 @@
 	color: var(--text-01);
 }
 
-.card-large#sup-dog,
-.card-med#sup-dog > .card-image {
-	/* background: linear-gradient(45deg, #463631 0%, #976c5b 100%); */
-}
-
 .card-large.card-dark a,
 .card-large.card-dark > ul {
 	color: var(--text-01);
@@ -106,8 +100,8 @@
 	color: var(--light-01);
 }
 
-section.hero {
-	min-height: 60vh;
+.hero {
+	min-height: 55vh;
 	height: fit-content;
 	padding: 0 40px;
 
@@ -118,7 +112,10 @@ section.hero {
 	flex-wrap: wrap;
 	flex-direction: row-reverse;
 }
-
+.hero img {
+	scale: 1.2;
+	margin-right: 50px;
+}
 .btn-group {
 	display: flex;
 	flex-direction: row;
