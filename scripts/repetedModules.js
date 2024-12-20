@@ -18,8 +18,8 @@ export const navData = `
             <a  href="./filterpage.html"
 						> 	 <span class="search-icone icone"> </span>Disover</a>
         </li>
-        <li><a href="#locate">Woman</a></li>
-        <li><a href="#locate">man</a></li>
+        <li><a href="./productGalary.html?for=Woman">Woman</a></li>
+        <li><a href="./productGalary.html?for=man">man</a></li>
         <li>
             <a href="./aboutUs.html">About Us</a>
         </li>
@@ -202,6 +202,25 @@ export function createcollectionsCard(product) {
 						</button>
 					</ul>
 				</li>
+    `;
+}
+
+export function productGalaryCard(product) {
+	return `
+      <li
+			class="item"
+			style="
+				background-image: url('${product.image}');
+			"
+		>
+			<div class="content">
+				<h2 class="title">${product.title}</h2>
+				<p class="description">
+					${product.description}
+				</p>
+				<button>Read More</button>
+			</div>
+		</li>
     `;
 }
 
