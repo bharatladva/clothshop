@@ -17,19 +17,14 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const forto = urlParams.get("for");
 
-let firstTenCardsData =
-	forto == "Woman"
-		? data.slice(0, 10) // First 10 items if 'forto' is 'woman'
-		: data.slice(10, 20); // Next 10 items if 'forto' is not 'woman'
+let firstTenCardsData = forto == "Woman" ? data.slice(0, 10) : data.slice(10, 20);
 
-// Render slider with productGalaryCard
 let firstTenCardsSlider = firstTenCardsData
 	.map((c) => productGalaryCard(c))
 	.reduce((p, c) => p + " " + c, "");
 const slider = document.querySelector(".slider");
 slider.innerHTML = firstTenCardsSlider;
 
-// Render flex card with createProductCard
 let firstTenCardsFlexCard = firstTenCardsData
 	.map((c) => createProductCard(c))
 	.reduce((p, c) => p + " " + c, "");
