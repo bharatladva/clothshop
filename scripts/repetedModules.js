@@ -132,7 +132,7 @@ export const renderFooter = () => {
 };
 
 export const locatedata = `
-<div class="scrollAnime">
+<div >
 				<h2>Location &amp; Hours</h2>
 				<p>
 					Our knowledgeable and friendly staff is always ready to assist you in making the
