@@ -9,6 +9,7 @@
 @import url("./home.css");
 @import url("./filterpage.css");
 @import url("./contectstyle.css");
+@import url("./aboutUs.css");
 
 :root {
 	--text-01: #45413e;
@@ -53,6 +54,7 @@ section {
 	margin: 0;
 	font-family: "Spartan", sans-serif;
 }
+
 a {
 	text-decoration: none;
 }

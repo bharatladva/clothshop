@@ -18,13 +18,10 @@ export const navData = `
             <a  href="./filterpage.html"
 						> 	 <span class="search-icone icone"> </span>Disover</a>
         </li>
-        <li>
-            <a href="#">Services</a>
-        </li>
         <li><a href="#locate">Woman</a></li>
         <li><a href="#locate">man</a></li>
         <li>
-            <a href="#">About Us</a>
+            <a href="./aboutUs.html">About Us</a>
         </li>
         <li>
             <a href="./contact.html">Contact Us</a>

@@ -19,7 +19,7 @@ let sliderChilds = data.map((c) => createProductCard(c)).reduce((p, c) => p + " 
 let collectionsChilds = collections
 	.map((c) => createcollectionsCard(c))
 	.reduce((p, c) => p + " " + c, "");
-const collectionsDiv = (document.querySelector(".services").innerHTML = collectionsChilds);
+let collectionsDiv = (document.querySelector(".services").innerHTML = collectionsChilds);
 
 document.addEventListener("DOMContentLoaded", function () {
 	const carousel = document.querySelector(".carousel");
