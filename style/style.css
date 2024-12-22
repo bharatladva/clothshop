@@ -33,21 +33,26 @@ html {
 @keyframes appear {
 	from {
 		opacity: 0;
-		transform: translateY(5vh);
-		scale: 0.5;
+		transform: translate3d(0, 5vh, 0) scale(0.95);
+		will-change: transform, opacity;
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
-		scale: 1;
+		transform: translate3d(0, 0, 0) scale(1);
+		will-change: transform, opacity;
 	}
 }
+
 section {
 	view-timeline: --section-scroll block;
-	animation: appear both;
+	animation: appear both ease-out;
 	animation-timeline: view();
-	animation-range: entry 25% cover 50%;
+	animation-range: entry 15% cover 35%;
+	backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-font-smoothing: antialiased;
 }
+
 * {
 	/* border: 1px solid red; */
 	box-sizing: border-box;
