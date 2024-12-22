@@ -33,7 +33,7 @@ html {
 @keyframes appear {
 	from {
 		opacity: 0;
-		transform: translate3d(0, 5vh, 0) scale(0.65);
+		transform: translate3d(0, 5vh, 0) scale(0.5);
 		will-change: transform, opacity;
 	}
 	to {
