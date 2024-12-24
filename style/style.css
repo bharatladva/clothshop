@@ -33,12 +33,12 @@ html {
 @keyframes appear {
 	from {
 		opacity: 0;
-		transform: translate3d(0, 5vh, 0) scale(0.5);
+		transform: translateY(25vh) scale(0.85);
 		will-change: transform, opacity;
 	}
 	to {
 		opacity: 1;
-		transform: translate3d(0, 0, 0) scale(1);
+		transform: translateY(0) scale(1);
 		will-change: transform, opacity;
 	}
 }
