@@ -7,6 +7,8 @@ import {
 	renderlocate,
 	productGalaryCard,
 	createProductCard,
+	setupAddToCart,
+	setupLikeBtns,
 } from "./repetedModules.js";
 
 renderNav();
@@ -31,6 +33,8 @@ let firstTenCardsFlexCard = firstTenCardsData
 let flex_card = document.getElementById("flex-card");
 flex_card.innerHTML = firstTenCardsFlexCard;
 
+setupAddToCart();
+setupLikeBtns();
 function activate(e) {
 	const items = document.querySelectorAll(".productGalaryitem");
 	if (e.target.matches(".next")) {

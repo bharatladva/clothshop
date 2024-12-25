@@ -1,5 +1,3 @@
-/** @format */
-
 import { renderNav, renderFooter, renderlocate } from "./repetedModules.js";
 renderNav();
 renderFooter();
@@ -9,16 +7,27 @@ import { data } from "./data.js";
 let cart = localStorage.getItem("cart");
 if (cart) {
 	cart = JSON.parse(cart).map((id) => Number(id));
-	console.log("Cart:", cart);
 } else {
-	console.log("Cart is empty");
+	cart = [];
 }
 
 let quantities = {};
 
+function calculateTotal() {
+	return cart.reduce((total, itemId) => {
+		const item = data.find((product) => product.id === itemId);
+		return total + item.price * quantities[itemId];
+	}, 0);
+}
+
+function updateTotalDisplay() {
+	const totalElement = document.getElementById("total-price");
+	totalElement.textContent = calculateTotal().toFixed(2);
+}
+
 function renderCartItems() {
 	const cartItemsContainer = document.getElementById("cart-items");
-	cartItemsContainer.innerHTML = ""; // Clear
+	cartItemsContainer.innerHTML = "";
 
 	const cartItems = data.filter((item) => cart.includes(item.id));
 
@@ -34,22 +43,18 @@ function renderCartItems() {
         <div class="cart-item-title">${item.title}</div>
         <div class="cart-item-price">Price: <span id="price-${item.id}">${
 			item.price * quantities[item.id]
-		}</span>
-			  </div>
+		}</span></div>
       </div>
       <div class="quantity-adjust">
         <button class="decrease-btn" data-id="${item.id}">-</button>
         <input type="text" id="quantity-${item.id}" value="${quantities[item.id]}" readonly />
         <button class="increase-btn" data-id="${item.id}">+</button>
         <button class="icone delete-icone" data-id="${item.id}"></button>
-
-
       </div>
     `;
 		cartItemsContainer.appendChild(cartItemDiv);
 	});
 
-	// Add event listeners for increase and decrease buttons after rendering
 	document.querySelectorAll(".increase-btn").forEach((button) => {
 		button.addEventListener("click", handleIncrease);
 	});
@@ -59,45 +64,40 @@ function renderCartItems() {
 	document.querySelectorAll(".delete-icone").forEach((button) => {
 		button.addEventListener("click", handleDelete);
 	});
+
+	updateTotalDisplay();
 }
 
-// Increase quantity and update price
 function handleIncrease(event) {
 	const itemId = Number(event.target.dataset.id);
 	quantities[itemId]++;
 	updateCartDisplay(itemId);
+	updateTotalDisplay();
 }
 
-// Decrease quantity and update price
 function handleDecrease(event) {
 	const itemId = Number(event.target.dataset.id);
 	if (quantities[itemId] > 1) {
 		quantities[itemId]--;
 		updateCartDisplay(itemId);
+		updateTotalDisplay();
 	}
 }
 
-// Delete item from cart and update localStorage
 function handleDelete(event) {
 	const itemId = Number(event.target.dataset.id);
-	console.log(itemId);
-
 	cart = cart.filter((id) => id !== itemId);
-
 	localStorage.setItem("cart", JSON.stringify(cart));
-
 	renderCartItems();
 }
 
-// Update the cart display after a change in quantity
 function updateCartDisplay(itemId) {
-	// Update quantity display
 	document.getElementById(`quantity-${itemId}`).value = quantities[itemId];
-
-	// Update the price based on the new quantity
 	const product = data.find((item) => item.id === itemId);
-	document.getElementById(`price-${itemId}`).innerText = product.price * quantities[itemId];
+	document.getElementById(`price-${itemId}`).innerText = (
+		product.price * quantities[itemId]
+	).toFixed(2);
+	updateTotalDisplay();
 }
 
-// Initial render
 renderCartItems();
