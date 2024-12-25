@@ -12,6 +12,7 @@
 @import url("./aboutUs.css");
 @import url("./productGalary.css");
 @import url("./loginsinein.css");
+@import url("./404page.css");
 
 :root {
 	--text-01: #45413e;
@@ -336,4 +337,49 @@ footer .devloper-btn {
 	padding: 10px 20px;
 	color: red;
 	font-size: 17px;
+}
+
+.container {
+	text-align: center;
+	background: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+	font-size: 6em;
+	color: #ff6b6b;
+	margin-bottom: 20px;
+}
+
+.container p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	color: #666;
+}
+
+.container a {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #ff6b6b;
+	color: white;
+	text-decoration: none;
+	font-size: 1.1em;
+	transition: background-color 0.3s;
+}
+
+.container a:hover {
+	background-color: #ff4040;
+}
+
+@media (max-width: 600px) {
+	.container h1 {
+		font-size: 4em;
+	}
+
+	.container p {
+		font-size: 1em;
+	}
 }
